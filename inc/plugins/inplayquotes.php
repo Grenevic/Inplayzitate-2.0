@@ -381,7 +381,7 @@ function inplayquotes_misc()
 
 		
 		$query = $db->query("SELECT username, subject FROM ".TABLE_PREFIX."posts
-		WHERE mybb_posts.pid = '$pid'");
+		WHERE ".TABLE_PREFIX."posts.pid = '$pid'");
 		$quoted = $db->fetch_array($query);
 		$quotename = $quoted['username'];
 		$quotethread = $quoted['subject'];
